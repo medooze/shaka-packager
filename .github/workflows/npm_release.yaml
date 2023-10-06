@@ -46,7 +46,7 @@ jobs:
               -e 's/"version": ""/"version": "${{ env.TARGET_REF }}"/'
 
       - name: Publish NPM package
-        uses: JS-DevTools/npm-publish@v1
+        uses: "./.github/actions/npm-publish-1"
         with:
           token: ${{ secrets.NPM_CI_TOKEN }}
           package: src/npm/package.json

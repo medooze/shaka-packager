@@ -43,7 +43,7 @@ jobs:
         uses: ./src/.github/workflows/custom-actions/build-docs
 
       - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v3
+        uses: "./.github/actions/actions-gh-pages-3.9.3"
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: gh-pages
